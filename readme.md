@@ -2,7 +2,7 @@
 
 ## About ##
 
-podcaster is a web application which will manage podcast episodes and feeds.
+podcaster is a secure web application which will provide mechanisims to manage podcast episodes and feeds, as well as track podcast statistics.
 
 ## Project Goals ##
 
