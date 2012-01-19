@@ -1,5 +1,5 @@
 # Project Goals #
 
-- Manage Podcast Storage
-- Manage Episodes
-- Secure Access
+- Manage Podcast Storage (S3/Local/offsite)
+- Manage Episodes (add/move/remove)
+- Secure Access (login/https)
