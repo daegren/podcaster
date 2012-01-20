@@ -10,14 +10,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120120183148) do
+ActiveRecord::Schema.define(:version => 20120120191229) do
 
-  create_table "podcasts", :force => true do |t|
-    t.string   "name"
-    t.date     "pubdate"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "podcasts" because of following StandardError
+#   Unknown type 'bool' for column 'explicit'
 
 end

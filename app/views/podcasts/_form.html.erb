@@ -1,4 +1,4 @@
-<%= form_for(@podcast) do |f| %>
+<%= form_for(@podcast, :html => { :class => "form-stacked" }) do |f| %>
   <% if @podcast.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :pubdate %><br />
+    <%= f.label :pubdate %>
     <%= f.datetime_select :pubdate %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create", :class => "btn primary" %>
   </div>
 <% end %>
