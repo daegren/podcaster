@@ -2,7 +2,7 @@
 
 <table class="zebra-striped">
   <tr>
-    <th>Name</th>
+    <th>Title</th>
     <th>Pubdate</th>
     <th>Description</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @podcasts.each do |podcast| %>
   <tr>
-    <td><%= podcast.name %></td>
+    <td><%= podcast.title %></td>
     <td><%= podcast.pubdate %></td>
     <td><%= podcast.description %></td>
     <td><%= link_to 'Show', podcast %></td>
