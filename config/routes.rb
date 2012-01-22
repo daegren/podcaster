@@ -1,6 +1,8 @@
 Podcaster::Application.routes.draw do
   resources :podcasts
   
+  resources :feeds  
+  
   root :to => "podcasts#index"
 
   # The priority is based upon order of creation:
