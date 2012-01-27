@@ -8,7 +8,7 @@ class AddMissingToPodcast < ActiveRecord::Migration
     add_column :podcasts, :pubdate, :datetime
     add_column :podcasts, :summary, :text
     add_column :podcasts, :keywords, :string
-    add_column :podcasts, :explicit, :bool
+    add_column :podcasts, :explicit, :boolean
     
   end
 end
