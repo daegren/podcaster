@@ -4,7 +4,9 @@ Podcaster::Application.routes.draw do
   
   match 'podcast.rss' => "feeds#index", :format => :rss
   
-  root :to => "podcasts#index"
+  match ':show/:podcast/feed.rss' => "feeds#show", :format => :rss
+  
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

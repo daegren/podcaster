@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PodcastTest < ActiveSupport::TestCase
+class PodcastsTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
