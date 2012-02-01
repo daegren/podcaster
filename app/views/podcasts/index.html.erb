@@ -1,4 +1,5 @@
 <div class="content">
+  <%= link_to "New Podcast", new_podcast_path, :class => 'btn' %>
   <% @podcasts.each do |p| %>
     <div class="podcast">
       <img src="<%= p.image %>" title="<%= p.title %>">

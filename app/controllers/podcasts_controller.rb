@@ -1,6 +1,10 @@
 class PodcastsController < ApplicationController
   
   def index
-    @podcasts = Podcasts.all
+    @podcasts = Podcast.all
+  end
+  
+  def new
+    @podcast = Podcast.new
   end
 end

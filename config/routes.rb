@@ -1,5 +1,5 @@
 Podcaster::Application.routes.draw do
-  resources :episodes
+  
   resources :podcasts
   
   match ':show/:podcast/feed.rss' => "feeds#show", :format => :rss
