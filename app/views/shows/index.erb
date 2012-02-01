@@ -8,7 +8,9 @@
   </div>
 </div>
 <div class="content">
-  <H1>
-    Welcome to podcaster
-  </h1>
+  <%= for @shows do |s| %>
+    <p>
+      s.title
+    </p>
+  <%= end %>
 </div>
