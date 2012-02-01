@@ -7,19 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="container-fluid">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
         <a class="brand" href="#">podcaster</a>
-        <ul class="nav">
-          <li class="active"><a href="/">home</a></li>
-          <li><%= link_to 'shows', shows_path() %></li>
-          <li><%= link_to 'podcasts', podcasts_path() %></li>
-        </ul>
+        <%= render 'layouts/nav' %>
       </div>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="container">
     <%= yield %>
   </div>
 

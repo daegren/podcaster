@@ -1,27 +1,10 @@
-<h1>Listing podcasts</h1>
-
-<table class="zebra-striped">
-  <tr>
-    <th>Title</th>
-    <th>Pubdate</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @podcasts.each do |podcast| %>
-  <tr>
-    <td><%= podcast.title %></td>
-    <td><%= podcast.pubdate %></td>
-    <td><%= podcast.description %></td>
-    <td><%= link_to 'Show', podcast %></td>
-    <td><%= link_to 'Edit', edit_podcast_path(podcast) %></td>
-    <td><%= link_to 'Destroy', podcast, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Podcast', new_podcast_path %>
+<div class="content">
+  <% @podcasts.each do |p| %>
+    <div class="podcast">
+      <img src="<%= p.image %>" title="<%= p.title %>">
+      <span class="title">
+        <%= p.title %>
+      </span>
+    </div>
+  <% end %>
+</div>

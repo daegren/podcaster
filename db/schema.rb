@@ -18,6 +18,23 @@ ActiveRecord::Schema.define(:version => 20120131223537) do
     t.datetime "updated_at"
   end
 
+  create_table "episodes", :force => true do |t|
+    t.integer  "keyword_id"
+    t.integer  "file_id"
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "pubDate"
+    t.string   "explicit"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "episodes", ["file_id"], :name => "index_episodes_on_file_id"
+  add_index "episodes", ["keyword_id"], :name => "index_episodes_on_keyword_id"
+
   create_table "files", :force => true do |t|
     t.string   "name"
     t.string   "location"
@@ -35,23 +52,6 @@ ActiveRecord::Schema.define(:version => 20120131223537) do
   end
 
   create_table "podcasts", :force => true do |t|
-    t.integer  "keyword_id"
-    t.integer  "file_id"
-    t.string   "title"
-    t.string   "subtitle"
-    t.string   "author"
-    t.text     "summary"
-    t.datetime "pubDate"
-    t.string   "explicit"
-    t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "podcasts", ["file_id"], :name => "index_podcasts_on_file_id"
-  add_index "podcasts", ["keyword_id"], :name => "index_podcasts_on_keyword_id"
-
-  create_table "shows", :force => true do |t|
     t.integer  "categories_id"
     t.integer  "podcast_id"
     t.string   "title"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20120131223537) do
     t.datetime "updated_at"
   end
 
-  add_index "shows", ["categories_id"], :name => "index_shows_on_categories_id"
-  add_index "shows", ["podcast_id"], :name => "index_shows_on_podcast_id"
+  add_index "podcasts", ["categories_id"], :name => "index_podcasts_on_categories_id"
+  add_index "podcasts", ["podcast_id"], :name => "index_podcasts_on_podcast_id"
 
 end

@@ -1,3 +1,3 @@
 class Files < ActiveRecord::Base
-  has_one :podcasts
+  has_one :episodes
 end

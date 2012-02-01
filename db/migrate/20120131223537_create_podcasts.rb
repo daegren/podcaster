@@ -1,6 +1,6 @@
-class CreateShows < ActiveRecord::Migration
+class CreatePodcasts < ActiveRecord::Migration
   def change
-    create_table :shows do |t|
+    create_table :podcasts do |t|
       t.references :categories
       t.references :podcast
       
@@ -19,7 +19,7 @@ class CreateShows < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :shows, :categories_id
-    add_index :shows, :podcast_id
+    add_index :podcasts, :categories_id
+    add_index :podcasts, :podcast_id
   end
 end
