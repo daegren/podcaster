@@ -9,3 +9,12 @@
 body {
   padding-top: 60px !important;
 }
+
+.hidden {
+  display: none;
+}
+
+.podcast img {
+  height: 200px;
+  width: 200px;
+}

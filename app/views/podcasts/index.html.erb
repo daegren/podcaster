@@ -1,11 +1,17 @@
 <div class="content">
-  <%= link_to "New Podcast", new_podcast_path, :class => 'btn' %>
-  <% @podcasts.each do |p| %>
-    <div class="podcast">
-      <img src="<%= p.image %>" title="<%= p.title %>">
-      <span class="title">
-        <%= p.title %>
-      </span>
-    </div>
-  <% end %>
+  <div class="row">
+    <%= link_to "New Podcast", new_podcast_path, :class => 'btn' %>
+  </div>
+  <div class="row">
+    <% @podcasts.each do |p| %>
+      <div class="podcast span3">
+        <a href="<%= url_for(p) %>">
+          <img src="<%= p.image %>" title="<%= p.title %>" /> 
+          <span class="title">
+            <%= p.title %>
+          </span>
+        </a>
+      </div>
+    <% end %>
+  </div>
 </div>

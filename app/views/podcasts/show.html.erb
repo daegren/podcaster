@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @podcast.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @podcast.subtitle %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @podcast.summary %>
+</p>
+
+
+<%= link_to 'Edit', edit_podcast_path(@podcast) %> |
+<%= link_to 'Back', podcasts_path %>
