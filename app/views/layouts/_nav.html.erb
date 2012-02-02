@@ -1,4 +1,11 @@
 <ul class="nav">
-  <li class="active"><a href="/">home</a></li>
-  <li><%= link_to 'podcasts', podcasts_path() %></li>
+  <% homePage = podcastPage = ''
+    if (current_page?(:controller => 'home'))
+      homePage = 'active'
+    elsif (current_page?(:controller => 'podcasts'))
+      podcastPage = 'active'
+    end
+    %>
+  <li class="<%= homePage %>"><a href="/">home</a></li>
+  <li class="<%= podcastPage %>"><%= link_to 'podcasts', podcasts_path() %></li>
 </ul>
