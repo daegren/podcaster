@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <img src="<%= @podcast.image %>" title="<%= @podcast.title %>" width=300 height=300>
+</p>
+
+<p>
   <b>Title:</b>
   <%= @podcast.title %>
 </p>
@@ -15,6 +19,32 @@
   <%= @podcast.summary %>
 </p>
 
+<p>
+  <b>Description:</b>
+  <%= @podcast.description %>
+</p>
 
-<%= link_to 'Edit', edit_podcast_path(@podcast) %> |
-<%= link_to 'Back', podcasts_path %>
+<p>
+  <b>Owner:</b>
+  <%= @podcast.owner_name %>, <%= @podcast.owner_email %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @podcast.language %>
+</p>
+
+<p>
+  <b>Copyright:</b>
+  <%= @podcast.copyright %>
+</p>
+
+<p>
+  <b>Explicit:</b>
+  <%= @podcast.explicit %>
+</p>
+
+<div class="btn-group">
+<%= link_to 'Edit', edit_podcast_path(@podcast), :class => "btn" %>
+<%= link_to 'Back', podcasts_path, :class => "btn" %>
+</div>
